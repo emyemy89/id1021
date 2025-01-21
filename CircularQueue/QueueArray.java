@@ -20,7 +20,6 @@ public class QueueArray {
         if (size == n && i==k) {
             resizeArray();
         }       
-        // Add at the position k and update k
         queue[k] = value;
         k = (++k) % n; // Wrap around if necessary (mod n)
         size++;
@@ -60,13 +59,13 @@ public class QueueArray {
     //     for (int j = 0; j < size; j++) {
             
     //         int c=queue[(i + j) % n];
-    //         newArray[j] = c;  // Handle wrap around
+    //         newArray[j] = c;  
     //     }
 
     //     // update references and indices
     //     queue = newArray;
-    //     i = 0;   // Reset i to 0 in the new array
-    //     k = size; // Set k after the last element
+    //     i = 0;   
+    //     k = size; 
     //     n = newCapacity;
     // }
 
@@ -112,16 +111,5 @@ public class QueueArray {
 
         queue.printQueue();
 
-        // Enqueue more elements to test the circularity stuff
-        // queue.enqueue(6);
-        // queue.enqueue(7);
-
-        // // Print 
-        // queue.printQueue();
-
-        // // Enqueue more to trigger resizing
-        // queue.enqueue(8);
-        // queue.enqueue(9);
-        // queue.printQueue();
     }
 }
